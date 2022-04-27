@@ -2,6 +2,22 @@
   width: 70px;
   height: 100vh;
   position: fixed;
-  color: #fff;
-  background-color: #202020;
+  font-size: 10.72px;
+  background-color: #fff;
+  text-align: center;
+  color: black;
+}
+
+.navbar_link1 {
+  margin-top: 60px;
+}
+
+.navbar_link {
+  margin: 20px 0;
+}
+
+.navbar_link:hover,
+.navbar_link1:hover {
+  transform: scale(1.05);
+  cursor: pointer;
 }

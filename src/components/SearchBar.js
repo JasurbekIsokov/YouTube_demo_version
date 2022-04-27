@@ -18,16 +18,38 @@ class SearchBar extends React.Component {
   render() {
     return (
       <div>
-        <div className="ui container" style={{ marginTop: "30px " }}>
-          <form className="ui search" onSubmit={this.onSubmitForm}>
-            <div className="ui icon input" style={{ width: "100%" }}>
+        <div
+          className="container"
+          style={{
+            marginTop: "-15px",
+            marginLeft: "410px",
+            position: "fixed ",
+          }}
+        >
+          <form className="search" onSubmit={this.onSubmitForm}>
+            <div
+              className="ui icon input"
+              style={{ width: "540px", borderRadius: "10px" }}
+            >
               <input
+                style={{
+                  backgroundColor: "#fff",
+                  // padding: "12px auto",
+                }}
                 onChange={this.onChangeInput}
                 className="prompt"
                 type="text"
                 placeholder="Search images..."
               />
-              <i className="search icon"></i>
+
+              <i
+                className="search icon"
+                style={{
+                  color: "#fff",
+                  padding: "18px",
+                  backgroundColor: "#555",
+                }}
+              ></i>
             </div>
             <div className="results"></div>
           </form>

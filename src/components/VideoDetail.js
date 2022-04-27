@@ -1,5 +1,7 @@
 import React from "react";
 
+import "../Style/MainStyle.css";
+
 class VideoDetail extends React.Component {
   constructor(props) {
     super(props);
@@ -8,11 +10,14 @@ class VideoDetail extends React.Component {
   renderVideo = () => {
     return (
       <div className="container">
+        <hr />
         <div className="video_picture">
           <img src={this.props.data.snippet.thumbnails.high.url} />
-          <h2>{this.props.data.snippet.title}</h2>
-          <p>{this.props.data.snippet.description}</p>
-          <span>{this.props.data.snippet.publishedAt}</span>
+          <div className="data_vid">
+            <h2>{this.props.data.snippet.title}</h2>
+            <p>{this.props.data.snippet.description}</p>
+            <span>{this.props.data.snippet.publishedAt}</span>
+          </div>
         </div>
         <div className="video_data"></div>
       </div>
