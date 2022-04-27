@@ -4,4 +4,50 @@
   background-color: #ffff;
   position: fixed;
   margin-top: -25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header_left,
+.header_right__icon {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.burger {
+  margin: auto 20px;
+}
+
+.youtube {
+  margin-left: 10px;
+}
+
+.youtube_t {
+  margin: auto 3px;
+  font-size: 24px;
+  font-weight: 600;
+  padding: 15px;
+}
+/* 
+.mik {
+  border-radius: 25px;
+  background-color: #555;
+} */
+
+.header_right {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 350px;
+  margin-right: 60px;
+}
+
+.header_right__icon {
+  width: 100px;
+}
+
+.header_right img {
+  margin: auto 10px;
 }

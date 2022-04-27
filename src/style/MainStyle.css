@@ -13,6 +13,14 @@ hr {
   justify-content: space-between;
 }
 
+.data_vid {
+  padding: 10px;
+}
+
 .title {
   font-size: 18.72px;
+}
+
+.des {
+  margin-top: 30px;
 }
