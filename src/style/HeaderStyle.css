@@ -1,0 +1,7 @@
+.header {
+  width: 100vw;
+  height: 60px;
+  background-color: #202020;
+  position: fixed;
+  margin-top: -30px;
+}
