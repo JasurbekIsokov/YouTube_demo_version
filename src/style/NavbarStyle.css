@@ -1,0 +1,7 @@
+.navbar {
+  width: 70px;
+  height: 100vh;
+  position: fixed;
+  color: #fff;
+  background-color: #202020;
+}
