@@ -6,7 +6,7 @@ class VideoDetail extends React.Component {
   constructor(props) {
     super(props);
     this.state = { arr: "" };
-    console.log(this.props);
+    // console.log(this.props);
   }
 
   getChannelInfo = async (id) => {
@@ -22,14 +22,21 @@ class VideoDetail extends React.Component {
     this.setState({ arr: a });
   }
 
+  getIdClick = () => {
+    this.props.func(this.props.data.id.videoId);
+  };
   renderVideo = () => {
     return (
       <div className="container">
-        <div className="video_picture">
+        <div className="video_picture" onClick={this.getIdClick}>
           <img src={this.props.data.snippet.thumbnails.medium.url} />
           <div className="data_vid">
-            <h2 className="title">{this.props.data.snippet.title}</h2>
-            <p>{this.props.data.snippet.publishedAt}</p>
+            <a style={{ fontStyle: "none", color: "#000" }} className="title">
+              {this.props.data.snippet.title}
+            </a>
+            <p style={{ marginTop: "10px" }}>
+              {this.props.data.snippet.publishedAt}
+            </p>
             <div className="channel_image">
               <img
                 src={this.state.arr}
