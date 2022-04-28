@@ -1,5 +1,7 @@
 import React from "react";
 
+import "../Style/Search.css";
+
 class SearchBar extends React.Component {
   constructor(props) {
     super(props);
@@ -28,8 +30,8 @@ class SearchBar extends React.Component {
         >
           <form className="search" onSubmit={this.onSubmitForm}>
             <div
-              className="ui icon input"
-              style={{ width: "540px", borderRadius: "10px" }}
+              className="ui icon input zSearch"
+              style={{ width: "540px", borderRadius: "10px", zIndex: "1000" }}
             >
               <input
                 style={{

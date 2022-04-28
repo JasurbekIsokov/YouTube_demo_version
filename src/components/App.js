@@ -46,10 +46,11 @@ class App extends React.Component {
       return (
         <div className="Video_container">
           <div className="player">
-            <VideoItem dataId={this.state.videoId} />
+            <VideoItem className="fixed" dataId={this.state.videoId} />
           </div>
           <div className="video_list">
             <VideoList
+              className="right_list"
               data={this.state.videoList}
               videoIdFunc={this.getVideoId}
             />

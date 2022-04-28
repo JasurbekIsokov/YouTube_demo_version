@@ -8,8 +8,8 @@ class VideoItem extends React.Component {
   render() {
     return (
       <iframe
-        width="650"
-        height="315"
+        width="800"
+        height="425"
         src={"https://www.youtube.com/embed/" + this.props.dataId}
         title="YouTube video player"
         frameborder="0"
