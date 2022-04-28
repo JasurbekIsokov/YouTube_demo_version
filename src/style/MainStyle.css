@@ -24,3 +24,12 @@ hr {
 .des {
   margin-top: 30px;
 }
+
+.channel_image {
+  display: flex;
+  align-items: center;
+}
+
+.channel_image span {
+  margin-left: 10px;
+}
