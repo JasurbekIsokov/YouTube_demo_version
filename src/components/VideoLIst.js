@@ -12,7 +12,11 @@ class VideoList extends React.Component {
     return this.props.data.data?.items.map((val) => {
       return (
         <div key={val.id.videoId}>
-          <VideoDetail data={val} func={this.props.videoIdFunc} />
+          <VideoDetail
+            data={val}
+            func={this.props.videoIdFunc}
+            getVideoName={this.props.getVideoName}
+          />
         </div>
       );
     });

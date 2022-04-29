@@ -5,7 +5,7 @@ import "../Style/MainStyle.css";
 class VideoDetail extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { arr: "" };
+    this.state = { arr: "", obj: {} };
     // console.log(this.props);
   }
 
@@ -17,13 +17,25 @@ class VideoDetail extends React.Component {
     return getJson.items[0].snippet.thumbnails.default.url;
     console.log(this.props);
   };
+
+  getWievInfo = async (id) => {
+    const data = await fetch(
+      `https://www.googleapis.com/youtube/v3/channels?part=statistics&id=${id}&key=AIzaSyDXZdLg3XezWfbwftMKP7r2mJyzOf2AO1Q`
+    );
+    const getJson = await data.json();
+    console.log(getJson);
+    return getJson.items[0].statistics;
+  };
+
   async componentDidMount() {
     let a = await this.getChannelInfo(this.props.data.snippet.channelId);
-    this.setState({ arr: a });
+    let b = await this.getWievInfo(this.props.data.snippet.channelId);
+    this.setState({ arr: a, obj: b });
   }
 
   getIdClick = () => {
     this.props.func(this.props.data.id.videoId);
+    this.props.getVideoName(this.props.data.snippet.title);
   };
   renderVideo = () => {
     return (
@@ -42,9 +54,12 @@ class VideoDetail extends React.Component {
                 src={this.state.arr}
                 style={{ width: "30px", borderRadius: "20px" }}
               />
-              <span>{this.props.data.snippet.channelTitle}</span>
+              <p>{this.props.data.snippet.channelTitle}</p>
+              {/* <br /> */}
+              {/* <p>{this.state.obj.viewCount} views</p> */}
             </div>
             <p className="des">{this.props.data.snippet.description}</p>
+            {/* <p className="des">{this.props.data.statistics}</p> */}
           </div>
         </div>
         <div className="video_data"></div>
